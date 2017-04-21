@@ -1,0 +1,37 @@
+{
+  "name": "react-generators",
+  "version": "1.0.0",
+  "description": "Plop generator templates for React using ES6/React best practices",
+  "main": "index.js",
+  "scripts": {
+    "generate": "plop --plopfile generators/index.js",
+    "generate:container": "plop --plopfile generators/index.js container",
+    "generate:component": "plop --plopfile generators/index.js component",
+    "generate:route": "plop --plopfile generators/index.js route",
+    "flow": "flow check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clarketm/React-generators.git"
+  },
+  "keywords": [
+    "plop",
+    "react",
+    "generators",
+    "handlebars"
+  ],
+  "author": "Travis Clarke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clarketm/React-generators/issues"
+  },
+  "homepage": "https://github.com/clarketm/React-generators#readme",
+  "dependencies": {
+    "plop": "^1.7.4"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.44.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}

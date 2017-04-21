@@ -1,0 +1,37 @@
+/**
+ *
+ * {{properCase name}}
+{{#if wantFlowTyped}}
+ * @flow
+{{/if}}
+ *
+ */
+
+import React, {PropTypes, {{component~}}} from 'react';
+{{#if wantStrings}}
+import strings from './strings';
+{{/if}}
+{{#if wantSCSSModules}}
+import styles from './{{properCase name}}.scss';
+{{/if}}
+
+class {{properCase name}} extends {{{component}}} {
+  static propTypes = {
+    dispatch: PropTypes.func.isRequired
+  };
+
+  static defaultProps = {
+  };
+
+  render() {
+    return (
+      {{#if wantStrings}}
+      <div{{#if wantSCSSModules}} className={styles.{{properCase name~}}}{{/if}}>{strings.header.title.message}</div>
+      {{else}}
+      <div{{#if wantSCSSModules}} className={styles.{{properCase name~}}}{{/if}}>{{{properCase name}}}</div>
+      {{/if}}
+    );
+  }
+}
+
+export default {{properCase name}};

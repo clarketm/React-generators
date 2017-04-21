@@ -1,0 +1,59 @@
+/**
+ *
+ * {{properCase name}}
+{{#if wantFlowTyped}}
+ * @flow
+{{/if}}
+ *
+ */
+
+import React, {PropTypes, {{component~}}} from 'react';
+import {connect} from 'react-redux';
+{{#if wantActionsAndReducer}}
+import {createStructuredSelector} from 'reselect';
+import Helmet from 'react-helmet';
+import makeSelect{{properCase name}} from './selectors';
+{{/if}}
+{{#if wantStrings}}
+import strings from './strings';
+{{/if}}
+{{#if wantSCSSModules}}
+import styles from './{{properCase name}}.scss';
+{{/if}}
+
+export class {{properCase name}} extends {{{component}}} {
+  static propTypes = {
+    dispatch: PropTypes.func.isRequired
+  };
+
+  static defaultProps = {
+  };
+
+  render() {
+    return (
+      {{#if wantStrings}}
+      <div{{#if wantSCSSModules}} className={styles.{{properCase name~}}}{{/if}}>{strings.header.title.message}</div>
+      {{else}}
+      <div{{#if wantSCSSModules}} className={styles.{{properCase name~}}}{{/if}}>{{{properCase name}}}</div>
+      {{/if}}
+    );
+  }
+}
+
+{{#if wantActionsAndReducer}}
+const mapStateToProps = createStructuredSelector({
+  {{camelCase name}}: makeSelect{{properCase name}}()
+});
+{{/if}}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatch
+  };
+}
+
+{{#if wantActionsAndReducer}}
+export default connect(mapStateToProps, mapDispatchToProps)({{properCase name}});
+{{else}}
+export default connect(null, mapDispatchToProps)({{properCase name}});
+{{/if}}

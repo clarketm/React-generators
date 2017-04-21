@@ -1,0 +1,21 @@
+$1
+    {
+      path: '{{path}}',
+      name: '{{component}}',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('../{{{directory (properCase component)}}}/reducer'),
+          {{#if useSagas}}
+          System.import('../{{{directory (properCase component)}}}/sagas'),
+          {{/if}}
+          System.import('../{{{directory (properCase component)}}}')
+        ]);
+        importModules.then(([reducer,{{#if useSagas}} sagas,{{/if}} component]) => {
+          injectReducer('{{camelCase component}}', reducer.default);
+          {{#if useSagas}}
+          injectSagas(sagas.default);
+          {{/if}}
+          loadModule(cb)(component);
+        }).catch(errorLoading);
+      }
+    },
