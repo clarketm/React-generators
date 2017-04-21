@@ -1,7 +1,7 @@
 {
   "name": "react-generators",
   "version": "1.0.0",
-  "description": "Plop generator templates for React using ES6/React best practices",
+  "description": "Generator templates for React using ES6/React best practices",
   "main": "index.js",
   "scripts": {
     "generate": "plop --plopfile generators/index.js",
