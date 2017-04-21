@@ -7,7 +7,6 @@ $ npm install
 ```
 
 ### Configuration
-#### Path configuration (for generated files)
 ```js
 // <project>/React-generators/generators/paths.js
 
