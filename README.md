@@ -1,9 +1,8 @@
 # React-generators
-
-### Plop generator templates for React using ES6/React best practices 
+Plop generator templates for React using ES6/React best practices 
 
 ### Installation
-```shell
+```bash
 $ npm install
 ```
 
@@ -20,12 +19,9 @@ appRoutes: resolveApp('examples/routes')                    // `routes` director
 ```
 
 ### Usage
-```shell
-$ npm run generators            // generate container, component, or route
-
-$ npm run generators:container  // generate container
-
-$ npm run generators:component  // generate component
-
-$ npm run generators:route      // generate route
+```bash
+$ npm run generators            # generate container, component, or route
+$ npm run generators:container  # generate container
+$ npm run generators:component  # generate component
+$ npm run generators:route      # generate route
 ```
