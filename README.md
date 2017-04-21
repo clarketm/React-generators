@@ -25,3 +25,6 @@ $ npm run generators:container  # generate container
 $ npm run generators:component  # generate component or element
 $ npm run generators:route      # generate route
 ```
+
+### Credits
+Special thanks to the folks over at [react-boilerplate](https://www.reactboilerplate.com/) and [scalable-react](https://github.com/scalable-react) for their fantastic boilerplate code!
