@@ -20,8 +20,8 @@ appRoutes: resolveApp('examples/routes')                    // `routes` director
 
 ### Usage
 ```bash
-$ npm run generators            # generate container, component, or route
+$ npm run generators            # generate container, component, element, or route
 $ npm run generators:container  # generate container
-$ npm run generators:component  # generate component
+$ npm run generators:component  # generate component or element
 $ npm run generators:route      # generate route
 ```
